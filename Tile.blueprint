@@ -1,0 +1,39 @@
+
+entities=
+[
+        {
+            name="Tile" 
+            position=[0.0 0.0 0.0] 
+            angles=[-0.0 0.0 0.0] 
+            tags=["usable"] components=
+            [
+                {type="Model" model_name="vertigo/interior/stack_01_base.model"} 
+                {type="Collision" collision_name="vertigo/interior/stack_01_base.collision" collision_physics=false collision_gravity=true collision_filter="Solid"} 
+                {type="Script" script_name="sweeper_of_mines/tile.lua" script_values={flag=[EntityId 2] mineBlueprint="mine/mine.blueprint" number=[EntityId 1]}} 
+                {type="Trigger" trigger_filter="Player" trigger_shape=0 trigger_box_half_extents=[1.0 1.0 1.0] trigger_force_strength=1.0 trigger_force_type=0 trigger_force_direction=[0.0 1.0 0.0]}
+            ] 
+            children=
+            [
+                {
+                    name="Scoreboard Number" 
+                    position=[0.0 0.25 0.720266] 
+                    angles=[-1.570796 0.001511 0.0] 
+                    tags=["scoreboard_number"] components=
+                    [
+                        {type="Model" model_name="scoreboard/number.model" model_skin="off"} 
+                        {type="Script" script_name="scoreboard/digit.lua" script_values={}}
+                    ]
+                } 
+                {
+                    name="Flag" 
+                    position=[0.0 0.0 0.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/stack_01_c.model" model_visible=false} 
+                        {type="Script" script_name="sweeper_of_mines/flag.lua" script_values={}}
+                    ]
+                }
+            ]
+        }
+]

@@ -1,0 +1,1039 @@
+
+editor=
+{
+        camera_origin=[21.010942 26.356092 -1.512304] 
+        camera_angles=[0.829031 4.719335 0.0]
+} 
+global_settings=
+{
+        background="backgrounds/dusk_sky/dusk_sky.material" 
+        gravity=[0.0 -9.81 0.0]
+} 
+entities=
+[
+        {
+            name="Game Bounds" 
+            position=[41.0 0.0 29.0] 
+            angles=[-0.0 0.0 0.0] 
+            components=
+            [
+                {type="Trigger" trigger_filter="All" trigger_shape=0 trigger_box_half_extents=[100.0 50.0 100.0] trigger_force_strength=1.0 trigger_force_type=0 trigger_force_direction=[0.0 1.0 0.0]} 
+                {type="Script" script_name="defaults/destroy_on_trigger.lua" script_values={onEnter=false filterTag=""}}
+            ]
+        } 
+        {
+            name="Room" 
+            editor_grid_spacing=4.0 
+            position=[-8.0 0.000002 -4.0] 
+            angles=[-0.0 0.0 0.0] 
+            tags=["room"] components=
+            [
+                {type="Automator" script_name="vertigo/room_generator.lua" script_values={size=[ABBox -2.0 4.0 2.0 8.0 4.0 8.0] interior=true exterior=true roof=true blue=false floorTrim=false} automator_region=[-2.0 4.0 2.0 8.0 4.0 8.0]}
+            ] 
+            children=
+            [
+                {
+                    name="wall_01_edge" 
+                    generated=true 
+                    position=[2.0 1.0 7.0] 
+                    angles=[1.570796 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_edge.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_edge.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_edge" 
+                    generated=true 
+                    position=[2.0 1.0 -4.0] 
+                    angles=[1.570796 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_edge.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_edge.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_edge" 
+                    generated=true 
+                    position=[-2.0 1.0 7.0] 
+                    angles=[1.570796 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_edge.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_edge.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_edge" 
+                    generated=true 
+                    position=[-2.0 1.0 -4.0] 
+                    angles=[1.570796 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_edge.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_edge.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_edge" 
+                    generated=true 
+                    position=[3.0 1.0 2.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_edge.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_edge.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_edge" 
+                    generated=true 
+                    position=[-8.0 1.0 2.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_edge.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_edge.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_edge" 
+                    generated=true 
+                    position=[3.0 1.0 -2.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_edge.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_edge.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_edge" 
+                    generated=true 
+                    position=[-8.0 1.0 -2.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_edge.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_edge.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_corner" 
+                    generated=true 
+                    position=[3.0 1.0 6.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_corner.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_corner.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_corner" 
+                    generated=true 
+                    position=[-8.0 1.0 6.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_corner.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_corner.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_corner" 
+                    generated=true 
+                    position=[3.0 1.0 -5.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_corner.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_corner.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_corner" 
+                    generated=true 
+                    position=[-8.0 1.0 -5.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_corner.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_corner.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_med" 
+                    generated=true 
+                    position=[0.0 1.0 2.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_med.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_med.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_med" 
+                    generated=true 
+                    position=[0.0 1.0 -2.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_med.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_med.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_med" 
+                    generated=true 
+                    position=[-4.0 1.0 2.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_med.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_med.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_med" 
+                    generated=true 
+                    position=[-4.0 1.0 -2.0] 
+                    angles=[1.570796 -0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_med.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_med.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_indent_c" 
+                    generated=true 
+                    position=[0.0 8.0 4.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_indent_c.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_indent_c.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_indent_c" 
+                    generated=true 
+                    position=[0.0 8.0 0.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_indent_c.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_indent_c.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_indent_c" 
+                    generated=true 
+                    position=[-4.0 8.0 4.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_indent_c.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_indent_c.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_indent_c" 
+                    generated=true 
+                    position=[-4.0 8.0 0.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_indent_c.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_indent_c.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_a" 
+                    generated=true 
+                    position=[4.0 4.0 4.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_a.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_a.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_a" 
+                    generated=true 
+                    position=[-8.0 4.0 4.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_a.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_a.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_a" 
+                    generated=true 
+                    position=[4.0 4.0 0.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_a.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_a.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_a" 
+                    generated=true 
+                    position=[-8.0 4.0 0.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_a.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_a.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_a" 
+                    generated=true 
+                    position=[0.0 4.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_a.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_a.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_a" 
+                    generated=true 
+                    position=[0.0 4.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_a.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_a.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_a" 
+                    generated=true 
+                    position=[-4.0 4.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_a.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_a.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_a" 
+                    generated=true 
+                    position=[-4.0 4.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_a.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_a.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_b" 
+                    generated=true 
+                    position=[4.0 4.0 8.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_b.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_b.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_b" 
+                    generated=true 
+                    position=[4.0 4.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_b.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_b.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_b" 
+                    generated=true 
+                    position=[-8.0 4.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_b.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_b.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="ceil_01_corner_b" 
+                    generated=true 
+                    position=[-8.0 4.0 -4.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/ceil_01_corner_b.model"} 
+                        {type="Collision" collision_name="vertigo/interior/ceil_01_corner_b.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_bottom" 
+                    generated=true 
+                    position=[-8.0 0.0 4.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_bottom.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_bottom.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_bottom" 
+                    generated=true 
+                    position=[-8.0 0.0 0.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_bottom.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_bottom.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_bottom" 
+                    generated=true 
+                    position=[0.0 0.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_bottom.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_bottom.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_bottom" 
+                    generated=true 
+                    position=[0.0 0.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_bottom.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_bottom.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_bottom" 
+                    generated=true 
+                    position=[-4.0 0.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_bottom.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_bottom.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_bottom" 
+                    generated=true 
+                    position=[-4.0 0.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_bottom.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_bottom.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_corner_bottom" 
+                    generated=true 
+                    position=[4.0 0.0 8.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_corner_bottom.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_corner_bottom.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_corner_bottom" 
+                    generated=true 
+                    position=[4.0 0.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_corner_bottom.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_corner_bottom.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_corner_bottom" 
+                    generated=true 
+                    position=[-8.0 0.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_corner_bottom.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_corner_bottom.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_corner_bottom" 
+                    generated=true 
+                    position=[-8.0 0.0 -4.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/wall_01_corner_bottom.model"} 
+                        {type="Collision" collision_name="vertigo/interior/wall_01_corner_bottom.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_top" 
+                    generated=true 
+                    position=[4.0 8.0 4.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_top" 
+                    generated=true 
+                    position=[-8.0 8.0 4.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_top" 
+                    generated=true 
+                    position=[4.0 8.0 0.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_top" 
+                    generated=true 
+                    position=[-8.0 8.0 0.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_top" 
+                    generated=true 
+                    position=[0.0 8.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_top" 
+                    generated=true 
+                    position=[0.0 8.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_top" 
+                    generated=true 
+                    position=[-4.0 8.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_top" 
+                    generated=true 
+                    position=[-4.0 8.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_top" 
+                    generated=true 
+                    position=[4.0 8.0 8.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_top" 
+                    generated=true 
+                    position=[4.0 8.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_top" 
+                    generated=true 
+                    position=[-8.0 8.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_top" 
+                    generated=true 
+                    position=[-8.0 8.0 -4.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_top.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_top.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[4.0 4.0 4.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[-8.0 4.0 4.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[4.0 4.0 0.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[-8.0 4.0 0.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[0.0 4.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[0.0 4.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[-4.0 4.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[-4.0 4.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_mid" 
+                    generated=true 
+                    position=[4.0 4.0 8.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_mid" 
+                    generated=true 
+                    position=[4.0 4.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_mid" 
+                    generated=true 
+                    position=[-8.0 4.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_mid" 
+                    generated=true 
+                    position=[-8.0 4.0 -4.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[-8.0 0.0 4.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[-8.0 0.0 0.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[0.0 0.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[0.0 0.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[-4.0 0.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="wall_01_mid" 
+                    generated=true 
+                    position=[-4.0 0.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/wall_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/wall_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_mid" 
+                    generated=true 
+                    position=[4.0 0.0 8.0] 
+                    angles=[-0.0 1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_mid" 
+                    generated=true 
+                    position=[4.0 0.0 -4.0] 
+                    angles=[-0.0 -3.141593 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_mid" 
+                    generated=true 
+                    position=[-8.0 0.0 8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="corner_01_mid" 
+                    generated=true 
+                    position=[-8.0 0.0 -4.0] 
+                    angles=[-0.0 -1.570796 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/corner_01_mid.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/corner_01_mid.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                }
+            ]
+        } 
+        {
+            name="Jump Pad" 
+            editor_grid_spacing=1.0 
+            position=[0.0 0.0 -8.0] 
+            angles=[-0.0 0.0 0.0] 
+            components=
+            [
+                {type="Model" model_name="pads/platform_jump.model"} 
+                {type="Trigger" trigger_filter="All" trigger_shape=1 trigger_sphere_radius=1.5625 trigger_force_strength=5.0 trigger_force_type=2 trigger_force_direction=[0.0 1.0 -0.0]} 
+                {type="Script" script_name="defaults/play_sound_on_trigger.lua" script_values={sound="pads/jump.wav" radius=8.0 volume=1.0 onEnter=true}}
+            ]
+        } 
+        {
+            name="Player Spawner" 
+            position=[-14.0 0.0 -3.0] 
+            angles=[-0.0 1.570796 0.0] 
+            components=
+            [
+                {type="Script" script_name="spawners/player_spawner.lua" script_values={playerBlueprint="sweeper_of_mines/Sweeper.blueprint" spawnDirection=[Dir 1.0 0.0 0.0] spawnGroup="default" ignoreTag1="" ignoreTag2="" excludeAllButTag="" ignorePlayerJoin=false spawnTeam="" giveBlueprintOnSpawn=""}}
+            ]
+        } 
+        {
+            name="Default Light" 
+            position=[0.0 10.0 0.0] 
+            angles=[0.785398 1.570796 0.0] 
+            components=
+            [
+                {type="Light" light_type=3 light_intensity=0.5 light_color=[1.0 1.0 1.0] light_casts_shadows=false light_inner_cone=0.523599 light_outer_cone=0.785398 light_atmosphere=0.0 light_max_distance=5.0} 
+                {type="Light" light_type=2 light_intensity=2.0 light_color=[1.0 1.0 1.0] light_casts_shadows=true light_inner_cone=0.523599 light_outer_cone=0.785398 light_atmosphere=0.0 light_max_distance=5.0}
+            ]
+        } 
+        {
+            name="Jump Pad" 
+            editor_grid_spacing=1.0 
+            position=[0.0 0.0 4.0] 
+            angles=[-0.0 0.0 0.0] 
+            components=
+            [
+                {type="Model" model_name="pads/platform_jump.model"} 
+                {type="Trigger" trigger_filter="All" trigger_shape=1 trigger_sphere_radius=1.5625 trigger_force_strength=5.0 trigger_force_type=2 trigger_force_direction=[0.0 1.0 -0.0]} 
+                {type="Script" script_name="defaults/play_sound_on_trigger.lua" script_values={sound="pads/jump.wav" radius=8.0 volume=1.0 onEnter=true}}
+            ]
+        } 
+        {
+            name="Floor" 
+            editor_grid_spacing=4.0 
+            position=[0.0 0.0 0.0] 
+            angles=[-0.0 0.0 0.0] 
+            components=
+            [
+                {type="Automator" script_name="vertigo/floor_generator.lua" script_values={size=[ABBox 0.0 0.0 -2.0 2.0 0.0 8.0]}}
+            ] 
+            children=
+            [
+                {
+                    name="floor_01_med" 
+                    generated=true 
+                    position=[0.0 0.0 4.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/floor_01_med.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/floor_01_med.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="floor_01_med" 
+                    generated=true 
+                    position=[0.0 0.0 0.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/floor_01_med.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/floor_01_med.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="floor_01_med" 
+                    generated=true 
+                    position=[0.0 0.0 -4.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/floor_01_med.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/floor_01_med.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="floor_01_med" 
+                    generated=true 
+                    position=[0.0 0.0 -8.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/floor_01_med.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/floor_01_med.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                }
+            ]
+        } 
+        {
+            name="Door" 
+            editor_grid_spacing=4.0 
+            position=[-4.0 0.000014 -4.0] 
+            angles=[-0.0 1.570797 0.0] 
+            tags=["wall_cutout"] components=
+            [
+                {type="Automator" script_name="vertigo/door_generator.lua" script_values={size=[ABBox -2.0 2.0 1.5 4.0 2.0 0.5]} automator_region=[-2.0 2.0 1.5 4.0 2.0 0.5]}
+            ] 
+            children=
+            [
+                {
+                    name="door_01_end_02" 
+                    generated=true 
+                    position=[0.0 0.0 0.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/door_01_end_02.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/door_01_end_02.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="door_01_end_01" 
+                    generated=true 
+                    position=[0.0 0.0 0.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/door_01_end_01.model"} 
+                        {type="Collision" collision_name="vertigo/interior/door_01_end_01.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="door_01_end_01" 
+                    generated=true 
+                    position=[-4.0 0.0 0.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/exterior/door_01_end_01.model"} 
+                        {type="Collision" collision_name="vertigo/exterior/door_01_end_01.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                } 
+                {
+                    name="door_01_end_02" 
+                    generated=true 
+                    position=[-4.0 0.0 0.0] 
+                    angles=[-0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Model" model_name="vertigo/interior/door_01_end_02.model"} 
+                        {type="Collision" collision_name="vertigo/interior/door_01_end_02.collision" collision_physics=false collision_gravity=true collision_filter="Solid"}
+                    ]
+                }
+            ]
+        } 
+        {
+            name="Entity" 
+            position=[4.0 -0.000008 -9.0] 
+            angles=[-0.0 0.0 0.0] 
+            components=
+            [
+                {type="Script" script_name="sweeper_of_mines/minefield.lua" script_values={tileBlueprint="sweeper_of_mines/Tile.blueprint" jumpPadBlueprint="pads/jump_pad.blueprint" width=16.0 height=16.0 mineCount=40.0}}
+            ]
+        }
+]

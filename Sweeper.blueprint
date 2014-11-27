@@ -1,0 +1,43 @@
+
+entities=
+[
+        {
+            name="Avatar" 
+            position=[0.0 0.0 0.0] 
+            angles=[-0.0 0.0 0.0] 
+            tags=["player"] components=
+            [
+                {type="Model" model_name="avatar/avatar.model"} 
+                {type="Animation" animation_graph="avatar/avatar.animation_graph" 
+                    animation_inputs={view_pitch=0.0 state="idle" shoot=false move_dir=0.0}
+                } 
+                {type="Controller" controller_radius=0.5 controller_height=0.671642} 
+                {type="Script" script_name="defaults/moving_player.lua" script_values={velocity=[Vec3 0.0 0.0 0.0] jumpSpeed=5.0 gravity=10.0 viewPitch=0.0 jumpHeld=false timeLastOnGround=0.0 moveDir=0.0}} 
+                {type="Script" script_name="shooter/shooting_player.lua" script_values={shootTimer=0.5}} 
+                {type="Script" script_name="inventory/inventory.lua" script_values={item1Id=[EntityId -1] item2Id=[EntityId -1] item3Id=[EntityId -1] item4Id=[EntityId -1] item5Id=[EntityId -1] item6Id=[EntityId -1] activeItemSlot=0.0 maxSlots=5.0 dropButtonEnabled=true}} 
+                {type="Script" script_name="defaults/using_player.lua" script_values={maxUseDistance=5.0 highlightColor=[Color 0.0 0.0 0.0 0.0]}} 
+                {type="Script" script_name="alive/alive.lua" script_values={health=100.0}} 
+                {type="Script" script_name="alive/take_damage_on_explosion.lua" script_values={damageOnExplosion=200.0}} 
+                {type="Script" script_name="alive/destroy_self_on_death.lua" script_values={}} 
+                {type="Script" script_name="defaults/create_player_on_destroy.lua" script_values={playerBlueprint="defaults/dead_player.blueprint" offsetDistance=4.0 offsetHeight=3.0}} 
+                {type="Script" script_name="spawners/spawn_effect.lua" script_values={particleName="spawners/spawn.particles" soundName="spawners/spawn.wav"}} 
+                {type="Script" script_name="defaults/play_sound_on_destroy.lua" script_values={sound="avatar/avatar_death1.wav" radius=8.0 volume=1.0}} 
+                {type="Script" script_name="teleporter/teleportable.lua" script_values={cooldownTime=0.5 angleLerpSpeed=5.0 lerpYaw=false lerpPitch=false lerpRoll=true}} 
+                {type="Label" label_text="*name*" label_vertical_offset=2.0} 
+                {type="Script" script_name="vehicle/vehicle_driver.lua" script_values={}}
+            ] 
+            children=
+            [
+                {
+                    attach_point="headtilt_bone" 
+                    name="Camera" 
+                    position=[0.0 0.0 0.0] 
+                    angles=[0.0 0.0 0.0] 
+                    components=
+                    [
+                        {type="Camera" camera_fov=1.570796}
+                    ]
+                }
+            ]
+        }
+]
